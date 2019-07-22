@@ -26,8 +26,9 @@ public class DubboConsumerBootstrap {
 //        SpringApplication.run(DubboConsumerBootstrap.class).close();
     }
 
-//    @Bean
-//    public ApplicationRunner runner() {
-//        return args -> logger.info(demoService.sayHello("Provider"));
-//    }
+    @Bean
+    public ApplicationRunner runner() {
+        logger.info(demoService.sayHello("Provider"));
+        return args -> logger.info(demoService.hello2());
+    }
 }
